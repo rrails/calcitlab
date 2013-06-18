@@ -6,11 +6,11 @@
 require_relative 'simple_functions.rb'
 require_relative 'advanced_functions.rb'
 
-def menu()
+def menu() #Menu Definition
 puts "Choose calculator"
 puts "Enter S for simple calculations, Enter A for advanced calculations"
 puts "Enter Q for quit"
-calculator = gets.chomp.upcase
+calculator = gets.chomp.upcase #User can enter upper or lower case
 end
 
 calculator = menu()
@@ -24,24 +24,26 @@ while calculator != 'Q'
 	elsif calculator == 'A'
 		puts "Enter R for square root"
 		puts "Enter E for Exponentiation"
+	elsif calculator != ( "A" || "S")
+		puts "Not valid option"
 	end
 
 	response = gets.chomp.upcase
 
-if response == "A"
-	do_add()
-elsif response == "S"
-	do_subtract()
-elsif response == "D"
-	do_divide()
-elsif response == "M"
-	do_multiply()
-elsif response == "R" 
-	do_square_root()
-elsif response == "E"
-	do_exponential()
-end
+	if response == "A"
+		do_add()
+	elsif response == "S"
+		do_subtract()
+	elsif response == "D"
+		do_divide()
+	elsif response == "M"
+		do_multiply()
+	elsif response == "R" 
+		do_square_root()
+	elsif response == "E"
+		do_exponential()
+	end
 
-puts " "
-calculator = menu()
+	puts " "
+	calculator = menu()
 end
