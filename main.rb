@@ -9,12 +9,14 @@ require_relative 'advanced_functions.rb'
 
 
 def menu() #Menu Definition
+
 	puts "Choose calculator"
 	puts "Enter"
 	puts "  S for simple calculations"
 	puts "  A for advanced calculations"
 	puts "  Q for quit"
 	calculator = gets.chomp.upcase #User can enter upper or lower case
+
 end
 
 def basic_calc #Menu and accept input for basic calculations
@@ -52,6 +54,7 @@ def advanced_calc #Menu and accept input for advanced calculations
 	end
 end
 # Start main loop
+puts `clear`
 calculator = menu()
 
 while calculator != 'Q'
